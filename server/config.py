@@ -14,7 +14,7 @@ WELCOME_TEXT = (
     "https://dn42.potat0.cc/\n"
 )
 
-WHOIS_ADDRESS = "127.0.0.1"
+WHOIS_ADDRESS = "whois.lantian.dn42"
 DN42_ONLY = False
 ALLOW_NO_CLEARNET = True
 
