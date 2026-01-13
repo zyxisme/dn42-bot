@@ -2,7 +2,7 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-BOT_TOKEN = "8342462731:AAGjBwuRJkDQzTwYRvM4rraYmvJjHQprABE"
+BOT_TOKEN = "8342462731:AAGjBwuRJkDQzTwYRvM4rraYmvJjHQprAE"
 CONTACT = "@zyxisme"
 DN42_ASN = 4242420116
 
