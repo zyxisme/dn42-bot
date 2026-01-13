@@ -2,13 +2,13 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-BOT_TOKEN = "XXXXX:XXXXXXXXXXXXXXXXXXX"
-CONTACT = "@Potat00000"
-DN42_ASN = 4242421816
+BOT_TOKEN = "8342462731:AAGjBwuRJkDQzTwYRvM4rraYmvJjHQprABE"
+CONTACT = "@zyxisme"
+DN42_ASN = 4242420116
 
 WELCOME_TEXT = (
     f"Hello, I'm the bot for Potat0's DN42 Network (`AS{DN42_ASN}`).\n"
-    f"你好，我是 Potat0 (`AS{DN42_ASN}`) 的 DN42 机器人。\n"
+    f"你好，我是 ZYXISME (`AS{DN42_ASN}`) 的 DN42 机器人。\n"
     "\n"
     "For more information, please check: 更多信息请查看：\n"
     "https://dn42.potat0.cc/\n"
@@ -19,17 +19,14 @@ DN42_ONLY = False
 ALLOW_NO_CLEARNET = True
 
 # API settings
-ENDPOINT = "dn42.domain.tld"  # Also used for tunnel
+ENDPOINT = "node.zyx-blog.top"  # Also used for tunnel
 API_PORT = 54321
-API_TOKEN = "secret_token"
+API_TOKEN = "Zyx_apitoken_1234"
 SERVERS = {
-    "las": "LAS | Las Vegas, USA | BuyVM",
-    "hkg": "HKG | Hong Kong | Skywolf",
-    "trf": "TRF | Sandefjord, Norway | Gigahost",
+    "us1": "US1 | RackNerd DC02",
 }
 HOSTS = {
-    "las": "192.168.1.1",
-    "hkg": "hkg.domain.tld",
+    "us1": "us1.node.zyx-blog.top",
 }
 
 # Webhook settings
@@ -38,8 +35,8 @@ WEBHOOK_LISTEN_HOST = "127.0.0.1"
 WEBHOOK_LISTEN_PORT = 3443
 
 # Optional settings
-LG_DOMAIN = "https://lg.dn42.domain.tld"
-PRIVILEGE_CODE = "123456"
+LG_DOMAIN = "https://lg.dn42.zyx-blog.top"
+PRIVILEGE_CODE = ""
 SINGLE_PRIVILEGE = False
 CN_WHITELIST_IP = ["8.8.8.8", "2001:4860:4860::8888"]
 SENTRY_DSN = None
@@ -58,13 +55,13 @@ def send_email(asn, mnt, code, email):
     )
     try:
         mimemsg = MIMEMultipart()
-        mimemsg["From"] = "My DN42<no-reply@mydomain.tld>"
+        mimemsg["From"] = "My DN42<mail@zyx-blog.top>"
         mimemsg["To"] = f"{mnt}<{email}>"
         mimemsg["Subject"] = "Verification Code"
         mimemsg.attach(MIMEText(text, "plain"))
-        connection = smtplib.SMTP(host="smtp.office365.com", port=587)
+        connection = smtplib.SMTP(host="smtpdm.aliyun.com", port=465)
         connection.starttls()
-        connection.login("no-reply@mydomain.tld", "secret_password")
+        connection.login("mail@zyx-blog.top", "AsdfQwer1234")
         connection.send_message(mimemsg)
         connection.quit()
     except BaseException:
